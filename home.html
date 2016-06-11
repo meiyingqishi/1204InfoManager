@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--避免将中文乱码显示-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>欢迎光临1204班</title>
+    <!--让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--添加jq框架链接-->
+    <script type="text/javascript" src="js//jquery-2.1.1.min.js"></script>
+
+    <!--MDI引入文件-->
+    <!--MDI脚本引入-->
+    <script type="text/javascript" src="js//prototype.js"></script>
+    <script type="text/javascript" src="js//effects.js"></script>
+    <script type="text/javascript" src="js//debug.js"></script>
+    <script type="text/javascript" src="js//window.js"></script>
+    <script type="text/javascript" src="js//HWWeb.js"></script>
+    <!--MDI样式引入-->
+    <link href="css//themes//default.css" rel="stylesheet" type="text/css" />
+    <link href="css//themes//spread.css" rel="stylesheet" type="text/css" />
+    <link href="css//themes//mac_os_x.css" rel="stylesheet" type="text/css" />
+    <link href="css//themes//alert.css" rel="stylesheet" type="text/css" />
+    <link href="css//themes//alert_lite.css" rel="stylesheet" type="text/css" />
+    <link href="css//themes//alphacube.css" rel="stylesheet" type="text/css" />
+    <link href="css//themes//darkX.css" rel="stylesheet" type="text/css" />
+    <link href="css//themes//nuncio.css" rel="stylesheet" type="text/css" />
+    <link href="css//themes//theme1.css" rel="stylesheet" type="text/css" />
+
+    <!--bootstrap脚本引入-->
+    <script type="text/javascript" src="bootstrap-3.3.1//js//bootstrap.min.js"></script>
+    <!--bootstrap样式引入-->
+    <link href="bootstrap-3.3.1//css//bootstrap.min.css" rel="stylesheet" />
+    <!--bootstrap图形字体引入-->
+    <link href="bootstrap-3.3.1//css//bootstrap-theme.min.css" rel="stylesheet" />
+    <!--页面元素样式-->
+    <link href="css//home.css" rel="stylesheet" />
+    <!--bootstrap字形图标声明-->
+    <link href="css//bootstrapfontico.css" rel="stylesheet" />
+    <!--首页图片框预置样式-->
+    <link href="css//homepicframework.css" rel="stylesheet" />
+    <!--使用MDI显示框脚本-->
+    <script type="text/javascript" src="js//useMdi.js"></script>
+    <!--首页图片框脚本-->
+    <script type="text/javascript" src="js//homePicFrame.js"></script>
+	<!--首页样式脚本-->
+    <script type="text/javascript" src="js//home.js"></script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" id="_body">
+	<div id="pifu" style="background-image:url('img\\pifu.jpg');">
+		<!--菜单栏-->
+		<nav class="navbar navbar-inverse navbar-fixed-top" id="menu-bar">
+			<div class="navbar-header">
+				<a href="img\\logo.png" target="_blank" class="navbar-brand" title="1204信息管理,点我详细看" ><img id="logol" src="img\\logo.png" alt="logo" /></a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="home.html">主页</a></li>
+					<li><a onmouseover="mymouseover(this)" onmouseout="mymouseout(this)" href="javascript:showJunXunPic()">军训照片</a></li>
+					<li><a onmouseover="mymouseover(this)" onmouseout="mymouseout(this)" href="nanhu.html" target="_blank">南湖园游</a></li>
+					<li><a onmouseover="mymouseover(this)" onmouseout="mymouseout(this)" href="shaokao.html" target="_blank">霝湖烧烤</a></li>
+					<li><a onmouseover="mymouseover(this)" onmouseout="mymouseout(this)" href="javascript:alert('-_- Sorry!暂无班级活动！','温馨提示');">班级活动</a></li>
+				</ul>
+				<div class="pull-right">
+					<a href="javascript:void(0)" class="btn btn-primary login">
+						<span class="glyphicon glyphicon-log-in"></span>
+						&nbsp;登 录
+					</a>
+					<a href="javascript:void(0)" class="btn btn-primary register">
+						<span class="glyphicon glyphicon-registration-mark"></span>
+						&nbsp;注 册
+					</a>
+				</div>
+			</div>
+		</nav>
+		
+		<!--搜索框-->
+		<br/>
+		<div class="row" id="bdsearch">
+			<div class="input-group col-lg-6 col-lg-offset-3">
+				<input type="text" id="txtSearchStr" class="form-control search" onkeydown="clickButton()" title="按键盘上的Enter键也能搜索喔！" placeholder="搜一下吧！ ^_^" />
+				<span class="input-group-btn ">
+					<button class="btn btn-default btn-info search" onclick="baiduSearch()" id="btnSearch" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+		
+		<!--字体飘动-->
+		<marquee direction="right" class="label label-info" style="background-color:green;">好好学习，天天向上！</marquee><br />
+
+		<!--图片框-->
+		<div id="center">
+			<div id="slider">
+				<div class="slide">
+					<img class="diapo" src="img\\图片框1.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+							<span class="title">霝湖公园</span>
+							全班同学游览霝湖公园，每个人都玩得很快乐、很尽兴。瞧，一张张脸上洋溢着美丽的笑容，这是最温暖的写照。
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框2.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+						<span class="title">五四文艺汇演</span>
+						我班同学和一班同学携手合作，共同完成了一场激情四射的舞蹈表演，为台下观众朋友奉献了一场精彩纷呈的饕餮视觉盛宴。
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框3.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+							<span class="title">军训</span>
+							这是我班众多女汉子中的几个代表，英姿飒爽，身姿矫健，真实巾帼不让须眉啊！
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框4.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+						<span class="title">班级聚餐</span>
+						一个个脸上洋溢着幸福喜悦的表情，足以见得一个个都是吃货，吃货的世界不解释，也解释不清楚。
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框5.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+							<span class="title">学校运动会</span>
+							赛场上除了精彩激烈的竞技外，还有各种奇特的表情，你看着表情，真实让人陶醉。
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框6.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+							<span class="title">军训教官</span>
+							英姿飒爽，脸庞俊朗的教官平时虽很严格，但私下是很温柔的，这不，给我们讲起了他在军营的生活，还有对我们年轻人的尊尊告诫，说得很动情。
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框7.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+							<span class="title">元旦晚会</span>
+							在一年一度的元旦佳节上，班上举行了精彩纷呈的元旦晚会，尤其是最后的这个压轴节目——小品“大话西游”，将晚会的氛围推向最高潮，现场成了欢乐的海洋。
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框8.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+							<span class="title">烧烤</span>
+							在霝湖的烧烤让人难忘，每个人都参与其中并吃得饱饱的。
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框9.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+							<span class="title">看望福利院的孩子</span>
+							在去福利院的路上，我们用心准备了一颗大大的心给孩子们，希望她们离开自己的阴影，活在充满阳光的春天。
+					</div>
+				</div>
+				<div class="slide">
+					<img class="diapo" src="img\\图片框10.jpg" alt="sorry-_-!图像无法显示"/>
+					<div class="text">
+							<a class="title" href="#">烧烤</a>
+							在霝湖公园的烧烤，同学们各司其职各有分工，有的洗菜有的生活...；这次烧烤使得我们班同学更团结更有凝聚力。
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--主体内容-->
+		<div class="container" id="content" >
+			<div class="row">
+				<!--左侧菜单-->
+				<div class="col-xs-2" id="myScrollspy" >
+					<ul class="nav nav-tabs nav-stacked" id="leftmenu" data-spy="affix" data-offset-top="130">
+						<li class="active"><a href="#section-1">班级简介</a></li>
+						<li><a href="#section-2">班级特色</a></li>
+						<li><a href="#section-3">班级目标</a></li>
+						<li><a href="#section-4">学习方法</a></li>
+						<li><a href="#section-5">获奖情况</a></li>
+					</ul>
+				</div>
+				
+				<!--内容-->
+				<div class="col-xs-10" id="main_content" style="background-image:url('img//beijing.jpg');">
+					<h2 id="section-1" class="title_h2">班级简介</h2>
+					<p class="p_content">　　信息管理与信息系统是计算机科学系的一个非师范班级，班级共有39位同学，女生36人，男生3人，分别来自全国各省市。班委成员如下：<br />
+					班主任：魏书堤老师<br />
+					班长：王坚<br />
+					团支书：颜海珊<br />
+					学习委员：陆扬<br />
+					文体委员：李茜<br />
+					心理委员：眭会<br />
+					生活委员：周文萃<br /><br />
+					　   班委会职责：<br />
+					<span class="badge progress-bar-success">1</span>. 根据学校有关部门的要求，制定班级的具体工作计划及总结，并组织全班同学认真落实。<br />
+					<span class="badge progress-bar-success">2</span>. 带动全班同学积极参加学校的各项活动，协助辅导员组织好全班同学的学习。经常组织全班同学学习党的方针政策、时事政策，坚定正确的政治方向。<br />
+					<span class="badge progress-bar-success">3</span>. 认真贯彻落实《衡阳师范学院大学学生行为准则》，宣传并执行学校的各项规章制度，认真考勤，严格管理。培植良好的班风，带领全班同学争创先进班集体。<br />
+					<span class="badge progress-bar-success">4</span>. 引导全班同学养成良好的学习风气，勤奋学习，努力成才。及时帮助解决学习时的困难。关心学校的教学改革。及时向学员的教学秘书反映学生对教学效果、课程设置、教学进度、计划安排的意见和建议。<br />
+					<span class="badge progress-bar-success">5</span>. 协助辅导员组织全班同学的思想品德评定、综合测评、优秀学生评定等工作。<br />
+					<span class="badge progress-bar-success">6</span>. 开展丰富的文体、科技等课外活动。活跃同学的课余文化生活。组织同学参加有益的社会活动、义务劳动和公益活动。<br />
+					<span class="badge progress-bar-success">7</span>. 代表同学的利益，为同学服务。及时协调解决同学中出现的问题，帮助同学排忧解难。
+					</p>
+					
+					<hr class="content_hr"/>
+					<h2 id="section-2" class="title_h2">班级特色</h2>
+					<p class="p_content">　　相逢是首歌，同行是你我的美好愿望，我们走到一起，39颗心，39种理想，39种信念。但我们有着同一个话题，同一份祝福。有人饮长江之水成长，有人伴三亚海滩而生，有人能体验那惊涛拍浪之势，有人常可以回味高原之壮阔。我们来自五湖四海，是知识将我们连结到一起，让我们铸造心中的殿堂。<br /><br />
+					　　  我们班有36位女生，3位男生，是一个团结的大家庭，大伙拧成一股绳，齐心协力为班级的成长做贡献。我们班也人才倍出，我们有活跃的幽默大师，有技艺高超的篮球健将，有文采飞扬的才子，更有眼明手快的技术高手。大学生活是新鲜的，实验楼里有我们严谨操作的身影，图书馆里有我们执着向上的信念，校道上留下我们轻松的足迹，体育场上更有我们英姿勃发的身影。我们一起快乐着，一起分享着蓝天上片片白云。我们拥抱生活，热爱生活，我们用我们全部的热忱去唤醒明天！
+					</p>
+
+					<hr class="content_hr"/>
+					<h2 id="section-3" class="title_h2">班级目标</h2>
+					<p class="p_content">　　美国著名哲学家爱默生说：“一心向着自己目标前进的人，整个世界都给他让路”。目标有以下的作用：目标可以让学生产生积极的心态，目标能是你看清使命，产生动力，目标是你感受到生存的意义和价值，目标有助于你分清轻重缓急，把握重点，目标使你把重点从过程转到结果，目标使你集中精力把握现在，目标能提高激情、有助于评估进展，目标使人产生信心、勇气和胆量，目标使人生自我完善，永不停步，目标使你成为一个成功的人。</p>
+					<img src="img/学习目标1.jpg" alt="sorry-_-!图片无法显示" class="thumbnail img-rounded" />
+					<p class="p_content">　　因此，入学开始，班级每位同学都制定了自己的短期目标与长期目标。短期目标以每学期为主，其中多数同学的目标包括了期末的考试与平时的学习规划，长期目标以毕业后的就业方向为主，每个人的发展方向不同因此目标也有所不同。从同学们制定的目标可以看出，除了学校的基本要求，例如：英语四级，全国计算机二级等外，同学们还计划考取其他方面的证书，例如：教师资格证，会计从业资格证，银行从业资格证，以及参加各种大赛并努力得到相应的奖项，同学还积极的进行创新，从本专业突破，进入老师的实验室。有了这些长期与短期目标，同学们有了学习的动力与兴趣，勇敢的面对困难，充分的利用时间，励志成为国家的栋梁。</p>
+					<p class="p_content">　　良好的学习环境不仅有利于教学活动周而复始的高效运转，而且能陶冶学生情操，净化学生的心灵，激励学生勤奋学习，积极向上，促使学生全面发展，健康成长。一个好的学习氛围，不仅可以使学生学得愉快，更重要的是，他可以大大促进和提高学生的学习效率，取得更好的学习成果。学生的主要任务是学习，而学习成绩的优劣，除了个人主观努力，同学之间的相互合作、相互帮助也是重要因素。</p><br />
+					<p class="p_content">　　我们在学习是要明确学习目的，端正学习态度，使班内形成浓厚学习空气，创造—个良好的学习环境，从而激发全体学生相互切磋，相互启发，取长补短，共同提高。每天自习每位同学保证按时到班，自觉主动的进行学习，自习是自己学习，在两个小时的时间内，同学们没有互相打扰，自己经行研究与思考，在自习外的空余时间进行讨论，讨论难点与重点，进行经验的交流。英语是世界第一语言，在当今的时代，英语占据着越来越重要的位置，因此每天的早自习，同学们利用早晨美好的时间进行英语的阅读和背诵。在同学们的共同努力下，班级形成了良好的学习氛围，每位同学相互影响，共同进步。</p>
+					<img src="img/学习目标2.jpg" alt="sorry-_-!图片无法显示" style="width:900px;" class="thumbnail img-rounded" />
+					<p class="p_content">　　39个笑脸，39个梦想，有了高大的学习目标，有了良好的学习的氛围，同学们学习的积极性高涨，在系部没有组织早自习的情况下，同学们主动要求每天早自习，在他人还在梦乡时，教学楼的教室中就留下这群怀着梦想的身影，教学楼中就回荡起那些响亮的声音，也许他们没有动人的旋律但却有感人的声音。</p><br />
+					<p class="p_content">　　大学的课程并没有高中的紧凑，常常有课余时间，这也给了我们时间去研究自己有兴趣的课题，校园中遍布他们的足印，教室，图书馆，河边，树下，都可以看见他们捧着一本本书籍尽情遨游。</p><br />
+					<p class="p_content">　　除了独自在书海中遨游，同学们还参加了各种学术性考试，大学生英语四六级考试，全国计算机等级考试，教师从业资格考试，普通话测试，会计从业资格考试，ACM程序大赛，大学生科技文化节，大学生英语竞赛等等，赛前同学们积极备考，赛后总结经验，吸取教训。经过各种学术性的考试，同学们增长了见识，发现了不足，并在未来的学习中进行弥补。</p><br />
+					<hr class="content_hr"/>
+					<h2 id="section-4" class="title_h2">学习方法</h2>
+					<p class="p_content">　　<span class="badge progress-bar-success">1</span>.抓紧一切空闲时间学习，将时间充分利用，认真的做一件事，绝不三心二意，专注于执着是成功的条件。不抛弃，不放弃，遇到困难发扬“小强精神”，坚信自我，知道成功。</p><br />
+					<p class="p_content">　　这位同学在各种比赛，考试中，都是一次性通过，绝对不做重复无意义的事是她的誓言，在学习中，她有着过人的毅力，有着不服输的精神，同时，她的精神也传染给周围的同学，由室友到班级同学，每位同学都受到她的影响，坚持着自己的梦想。</p>
+					<div>
+						<img src="img/学习方法1.jpg" alt="sorry-_-!图片无法显示" style="width:470px" class="img-rounded"/>
+						<img src="img/学习方法2.jpg" alt="sorry-_-!图片无法显示" style="width:430px;" class="img-rounded pull-right"/>
+					</div>
+					<p class="p_content">　　<span class="badge progress-bar-success">2</span>.交流与讨论使得我们找到成功的捷径，将每天的课程重点与难点拿出，以寝室为单位讨论，互帮互助，解决问题，共度难关。</p><br />
+					<p class="p_content">　　这个寝室有着和谐的气氛，她们在周末时，会在寝室中讨论着本周学习的难点，探讨一道习题的解析方法，在困难面前她们共同面对，欢乐与悲伤她们一同度过，她们是一个小家庭，迈着同样的步伐前进。</p>
+					<img src="img/学习方法3.jpg" alt="sorry-_-!图片无法显示" style="width:900px;" class="thumbnail img-rounded"/>
+					<p class="p_content">　　<span class="badge progress-bar-success">3</span>.反思与总结，39人的大家庭，班主任是个大家长，在每个月的学习后，这个大家长带领着我们进行总结与反思，在反思中进步，在总结中成长。</p>
+					<hr class="content_hr"/>
+					<h2 id="section-5" class="title_h2">获奖情况</h2>
+					<p class="p_content">　　<span class="badge progress-bar-success">1</span>.班级共39人，第一次参加英语四级考试人数为38人，通过人数为23人，通过率高达59% 。</p>
+					<img src="img/获奖情况1.jpg" alt="sorry-_-!图片无法显示" style="width:800px;" class="thumbnail img-rounded"/><br /><br />
+					<p class="p_content">　　<span class="badge progress-bar-success">2</span>.全国英语竞赛，陈俭，沈蝶获院级三等奖。</p>
+					<img src="img/获奖情况2.jpg" alt="sorry-_-!图片无法显示" style="width:800px;" class="thumbnail img-rounded"/><br /><br />
+					<p class="p_content">　　<span class="badge progress-bar-success">3</span>.“我的中国梦”征文大赛，谢梦玲同学获院二等奖。</p>
+					<img src="img/获奖情况3.jpg" alt="sorry-_-!图片无法显示" style="width:800px;" class="thumbnail img-rounded"/><br /><br />
+					<p class="p_content">　　<span class="badge progress-bar-success">4</span>.辩论赛及演讲赛，余青同学在辩论赛及“超级演讲家”比赛中获得优异成绩。</p><br />
+					<img src="img/获奖情况4.jpg" alt="sorry-_-!图片无法显示" style="width:800px;" class="thumbnail img-rounded"/>
+					<img src="img/获奖情况5.jpg" alt="sorry-_-!图片无法显示" style="width:800px;" class="thumbnail img-rounded"/><br /><br />
+					<p class="p_content">　　<span class="badge progress-bar-success">5</span>.李惊鸿，甘杰同学获院级“三好学生”称号，陆扬同学获系级“三号学生”称号。</p><br />
+					<p class="p_content">　　<span class="badge progress-bar-success">6</span>.科技创新，王坚、刘思思、杨芳、常丹等同学获得院级三等奖，陈俭等同学获得院级优胜奖
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!--页脚-->
+		<footer>
+			<div id="ft">
+				<div>
+					<span>友情链接：</span>&nbsp;
+					<a href="http://www.hynu.edu.cn/index.jsp">衡阳师范学院</a>&nbsp;
+					<a href="http://jkx.hynu.cn/">计算机科学系</a><br />
+					<span>意见反馈（E-mail）：<a href="mailto:1223944886@qq.com">1223944886@qq.com</a></span>
+				</div>
+				<p>Copyright &copy; 2015 计算机科学系1204级信息管理1班 版权所有仿冒必究</p>
+			</div>
+		</footer>
+		
+		<!--返回顶部-->
+		<div id="go_top" class="go_top dn">
+			<a href="#_body"><img src="img//backtop.png" title="返回顶部" class="go" alt="GO TOP"/></a>
+		</div>
+	</div>
+</body>
+</html>

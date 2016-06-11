@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <!--让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--引入jq-->
+    <script type="text/javascript" src="js//jquery-2.1.1.min.js"></script>
+    <!--引入Bootstrap脚本-->
+    <script type="text/javascript" src="bootstrap-3.3.1//js//bootstrap.min.js"></script>
+    <!--引入Bootstrap样式-->
+    <link href="bootstrap-3.3.1//css//bootstrap.min.css" rel="stylesheet" />
+    <!--引入Bootstrap字型图标样式-->
+    <link href="bootstrap-3.3.1//css//bootstrap-theme.min.css" rel="stylesheet" />
+    <!--自定义样式-->
+    <link href="css//junxun.css" rel="stylesheet" />
+    <!--自定义脚本-->
+    <script type="text/javascript" src="js//junxun.js"></script>
+	<script>
+		function mouseoverbtn(item){
+			item.style.color="#0094ff";
+			item.style.border="1px solid #0094ff";
+			item.style.backgroundColor="#ff0";
+			$(item).removeClass("btn-info");
+		}
+		
+		function mouseoutbtn(item){
+			item.style.color="#fff";
+			item.style.border="";
+			item.style.backgroundColor="";
+			$(item).addClass("btn-info");
+			
+		}
+	</script>
+</head>
+<body>
+    <button type="button" class="btn btn-info toggleBtn" id="btnPrePic" onmouseover="mouseoverbtn(this)" onmouseout="mouseoutbtn(this)">上一张</button>
+    <div class="col-sm-6 col-md-6 col-md-offset-3" id="pic" style="position:absolute">
+        <a class="thumbnail" id="a_img">
+            <img src="img\\jx1.jpg"  class="pic" alt="sorry-_-!图像无法显示"/>
+        </a>
+    </div>
+    <button type="button" class="btn btn-info toggleBtn" id="btnNextPic" onmouseover="mouseoverbtn(this)" onmouseout="mouseoutbtn(this)">下一张</button>
+    <div>
+        <ul class="pagination" id="picPage">
+			<li><a href="javascript:void(0)">&laquo;</a></li>
+			<li title="1" class="active"><a href="javascript:void(0)">1</a></li>
+			<li title="2"><a href="javascript:void(0)">2</a></li>
+			<li title="3"><a href="javascript:void(0)">3</a></li>
+			<li title="4"><a href="javascript:void(0)">4</a></li>
+			<li title="5"><a href="javascript:void(0)">5</a></li>
+            <li title="6"><a href="javascript:void(0)">6</a></li>
+            <li title="7"><a href="javascript:void(0)">7</a></li>
+            <li title="8"><a href="javascript:void(0)">8</a></li>
+            <li title="9"><a href="javascript:void(0)">9</a></li>
+			<li><a href="javascript:void(0)">&raquo;</a></li>
+		</ul>
+    </div>
+</body>
+</html>
