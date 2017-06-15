@@ -22,7 +22,7 @@
 	background-color:#fff;
 }
 .title_h2{
-    color:red;
+    color:#00F;
     text-align:center;
 	font-family:"华文行楷";
 	padding-top:45px;
@@ -36,22 +36,22 @@
 }
 #ft{
     text-align:center;
-    background-color:#000;/*#393939;*/
-    color:#fff;/*#999;*/
+    background-color:#333;
+    color:#999;
     overflow:hidden;
     padding:10px 0 10px;
     margin-top:20px;
     font-size:medium;
 }
 #ft>div>a,#ft>div>span>a{
-	color:yellow;
+	color:#BBB;
 }
 marquee{
     font-family:YouYuan;
 	margin-top:6px;
 }
 .content_hr{
-    border:1px dashed #0094ff;
+    border:1px dashed #009900;
 }
 #main_content{
     border:1px solid #0094ff;
